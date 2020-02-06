@@ -1,0 +1,16 @@
+---
+# tasks file for JENKINS
+- name:
+  file:
+    path: /usr/lib/jenkins/
+    state: directory
+- name: Download jenkins jar
+  get_url:
+    url: http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+    dest: /usr/lib/jenkins/
+- name: create jenkins service
+  copy:
+    src: /vagrant_data/ROLE_JENKINS/files/jenkins.service
+    dest: /etc/systemd/system/jenkins.service
+  notify: 
+    - start jenkins
