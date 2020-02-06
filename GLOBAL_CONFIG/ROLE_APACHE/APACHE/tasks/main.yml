@@ -1,5 +1,5 @@
 --- # tasks file for APACHE
-- name: install java
+- name: install APACHE
   yum:
     name: httpd
     state: latest

@@ -1,0 +1,9 @@
+--- # tasks file for TOMCAT
+- name: install TOMCAT
+  yum:
+    name: tomcat
+    state: latest
+- name: start httpd
+  service:
+    name: tomcat
+    state: started
