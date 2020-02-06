@@ -1,0 +1,5 @@
+--- # lanceur de rôle
+- hosts: vagrant
+  become: yes
+  roles:
+    - JEANKINS
