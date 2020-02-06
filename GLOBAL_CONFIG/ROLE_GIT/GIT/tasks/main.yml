@@ -1,0 +1,9 @@
+--- # tasks file for GIT
+
+- name: rpm key
+  rpm_key:
+      key: rpm --import http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco
+- name: install GIT
+  yum:
+    name: git
+    state: latest
