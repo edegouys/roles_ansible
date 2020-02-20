@@ -1,0 +1,9 @@
+---
+# handlers file for JENKINS
+- name: start jenkins
+  systemd:
+    state: started
+    daemon_reload: yes
+    name: jenkins
+  listen: start jenkins
+

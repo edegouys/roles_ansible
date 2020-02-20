@@ -1,0 +1,12 @@
+--- # lanceur de rôle
+- hosts: vagrant
+  become: yes
+  roles:
+    - ROLE_JAVA
+    - ROLE_MVN
+    - ROLE_GIT
+    - ROLE_APACHE
+    - ROLE_TOMCAT
+    - ROLE_JENKINS
+    - ROLE_ARTIFACTORY
+    - ROLE_DOCKER

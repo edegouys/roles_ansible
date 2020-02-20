@@ -1,0 +1,9 @@
+---
+# handlers file for APACHE
+- name: start httpd
+  systemd:
+    state: started
+    daemon_reload: yes
+    name: httpd
+  listen: start httpd
+
